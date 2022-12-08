@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            setInterval(function () { makeTimer(); }, 1000);
+        });
+
+
+        function makeTimer() {
+
+            //		var endTime = new Date("29 April 2018 9:56:00 GMT+01:00");	
+            var endTime = new Date("25 December 2022 00:00:00");
+            endTime = (Date.parse(endTime) / 1000);
+
+            var now = new Date();
+            now = (Date.parse(now) / 1000);
+
+            var timeLeft = endTime - now;
+
+            var days = Math.floor(timeLeft / 86400);
+            var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+            var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600)) / 60);
+            var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+
+            if (hours < "10") { hours = "0" + hours; }
+            if (minutes < "10") { minutes = "0" + minutes; }
+            if (seconds < "10") { seconds = "0" + seconds; }
+
+            $("#days").html(days + "<span>Days</span>");
+            $("#hours").html(hours + "<span>Hours</span>");
+            $("#minutes").html(minutes + "<span>Minutes</span>");
+            $("#seconds").html(seconds + "<span>Seconds</span>");
+
+        }
+
+    </script>
+    <title> 🎅Calendar</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="s.css" />
+
+</head>
+
+<body>
+    <script src="v.js"></script>
+
+    <div class="hello2">
+        <h1 style="color:red;margin-top:50px ">Christmas</h1>
+    </div>
+    <h2>Christmas countdown</h2>
+    <div class="topnav">
+        <div class="topnav-right">
+            <a href="index2.html">
+                    <h1> games</h1>
+                </a>
+        </div>
+        <div class="topnav-right">
+            <a
+                href="https://www.amazon.com/s?k=christmas&crid=1HR9P1EZNEXEH&sprefix=christmas%2Caps%2C98&ref=nb_sb_noss_1">
+                    <h1> buy</h1>
+                </a>
+        </div>
+
+        <a href="clock.html" class="active">
+                <h1> Countdown</h1>
+            </a>
+
+
+        <a href="AboutC.html">
+            <h1>history</h1>
+        </a>
+
+        <div class="topnav-centered">
+            <a href="index.html">
+                <h1>home</h1>
+            </a>
+        </div>
+    </div>
+        <div id="timer">
+            <div id="days"></div>
+            <div id="hours"></div>
+            <div id="minutes"></div>
+            <div id="seconds"></div>
+
+
+        </div>
+
+        <h2 style = "color:azure; font-size: 30px;float:none; font-family:fantasy;">There Are Only</h2>
+        <div class = "hh">
+            <h2 style = "color:azure;font-size:30px;float:none;font-family:fantasy;">Until Christmas!</h2>
+        </div>
+       
+</body>
+
+ 
+
+
+
+
+
+</html>
