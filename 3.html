@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>🎅Christmas</title>
+
+  <link rel="stylesheet" type="text/css" href="style1.css" />
+  <script src="v.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .alert {
+      padding: 20px;
+      background-color: rgb(79, 138, 20);
+      color: white;
+    }
+
+    .closebtn {
+      margin-left: 15px;
+      color: white;
+      font-weight: bold;
+      float: right;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .closebtn:hover {
+      color: black;
+    }
+
+    .loader {
+      border: 7px solid #f3f3f3;
+      border-radius: 50%;
+      position: absolute;
+  left:50%;
+  top: 50%;
+
+      border-top: 7px solid #3498db;
+      width: 30px;
+      height: 30px;
+      -webkit-animation: spin 5s linear infinite;
+      /* Safari */
+      animation: spin 5s linear infinite;
+    }
+
+
+
+    /* Safari */
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
+
+$ git add index.html
+$ git commit -m "Initialize website"
+$ git push origin main
+
+
+
+</head>
+
+
+
+
+
+
+
+<body>
+
+
+  <div id="container">
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+
+      <strong>Welcome to Christmas website! Merry christmas!</strong>
+    </div>
+
+ 
+      <img src="c1/merry.png" width=200 height=200 class="center">
+ 
+    <!--<p><h1 style = color:tomato >Christmas</h1></p>-->
+
+    <!--<a href=""><i><h2> list</h2></i></a>-->
+    <div class="topnav">
+      <div class="topnav-right">
+        <a href="index2.html">
+          <h1> games</h1>
+        </a>
+      </div>
+      <div class="topnav-right">
+        <a href="https://www.amazon.com/s?k=christmas&crid=1HR9P1EZNEXEH&sprefix=christmas%2Caps%2C98&ref=nb_sb_noss_1">
+          <h1> buy</h1>
+        </a>
+      </div>
+
+      <a href="clock.html">
+        <h1>Countdown</h1>
+      </a>
+
+
+      <a href="AboutC.html">
+        <h1>history</h1>
+      </a>
+
+      <div class="topnav-centered">
+        <a href="index.html" class="active">
+          <h1> home </h1>
+        </a>
+      </div>
+
+    </div>
+    <div class="item">
+      <a href="https://www.youtube.com/watch?v=HwYTrcOIjHw"><img src="c1/CHRISTMAS TREE.png" width=900 height=550
+          class=center></a>
+    </div>
+
+    <p>
+    <h5><i><em><b>click image to go to link</b></em></i></h5>
+    </p>
+    <audio controls>
+      <source src="Deck-The-Halls-1.mp3" type="audio/mpeg" style = "float:center" >
+ 
+    </audio>
+    <h3 style=font-family:cursive>A Veer Patel Production</h3>
+ 
+  </div>
+ 
+
+  <div id="loader">
+  <h1 style="text-align: center;font-family: 'Times New Roman', Times, serif;margin-top: 265px;position:absolute;right:44%;bottom:50%">Loading...</h1>
+  <div class="loader" ></div> 
+</div>
+</body>
+
+<script>
+  var content = document.getElementById("container");
+  var loader = document.getElementById("loader");
+
+  content.style.display = "none";
+  setTimeout(function () {
+    content.style.display = "block";
+    loader.style.display = "none";
+  }, 3000);
+</script>
+
+</html>
