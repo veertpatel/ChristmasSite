@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>  <link rel="stylesheet" type="text/css" href="style1.css" />
+        <style>
+            body{
+            
+      background-color:purple
+    }
+    
+          </style></head>
+<body>
+    <h1 style = "text-align: center;">Your Unit is being processed...</h1>
+    <div id="container">
+        <form action="index.html">
+            <input type="submit" value="Next  →" style = "width:200px;height:50px;border-radius:100px;position:absolute;left:45%;top:40%;background-color: greenyellow;">
+          </form>
+    <script>
+        var content = document.getElementById("container");
+        content.style.display = "none";
+        setTimeout(function () {
+          content.style.display = "block"; 
+        }, 5000);
+      </script>
+    
+</body>
+</html>
